@@ -1,0 +1,13 @@
+{
+  "name": "sql-editor",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.0.2",
+    "@angular/core": "^11.0.2",
+    "antlr4": "^4.8.0",
+    "monaco-editor": "^0.21.2"
+  },
+  "dependencies": {
+    "tslib": "^2.0.3"
+  }
+}

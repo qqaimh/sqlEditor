@@ -122,7 +122,50 @@
           }
         }
       }
+    },
+    "sql-editor": {
+      "projectType": "library",
+      "root": "projects/sql-editor",
+      "sourceRoot": "projects/sql-editor/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/sql-editor/tsconfig.lib.json",
+            "project": "projects/sql-editor/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sql-editor/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sql-editor/src/test.ts",
+            "tsConfig": "projects/sql-editor/tsconfig.spec.json",
+            "karmaConfig": "projects/sql-editor/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/sql-editor/tsconfig.lib.json",
+              "projects/sql-editor/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "newSqlEditor"
+  "defaultProject": "newSqlEditor",
+  "cli": {
+    "analytics": "a37ffcbf-9f71-4b45-85d4-5be070804498"
+  }
 }
