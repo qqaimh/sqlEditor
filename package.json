@@ -4,12 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 8899",
-    "build": "ng build",
+    "build": "ng build -prod",
+    "package": "ng-packagr -p package.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~11.0.2",
     "@angular/common": "~11.0.2",
