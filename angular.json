@@ -25,7 +25,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "**/*", "input": "node_modules/monaco-editor/min", "output": "./assets/monaco/" }
             ],
             "styles": [
               "src/styles.scss"
@@ -127,7 +128,7 @@
       "projectType": "library",
       "root": "projects/sql-editor",
       "sourceRoot": "projects/sql-editor/src",
-      "prefix": "lib",
+      "prefix": "warp",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
